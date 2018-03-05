@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+    margin: 0;
+}
+
+.principal {
+    padding: 20px 15px;
+}
+
+.coluna-ver {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.badge-error {
+  background-color: #b94a48;
+}
+.badge-error:hover {
+  background-color: #953b39;
+}
+.badge-warning {
+  background-color: #f89406;
+}
+.badge-warning:hover {
+  background-color: #c67605;
+}
+.badge-success {
+  background-color: #468847;
+}
+.badge-success:hover {
+  background-color: #356635;
+}
+.badge-info {
+  background-color: #3a87ad;
+}
+.badge-info:hover {
+  background-color: #2d6987;
+}
+.badge-inverse {
+  background-color: #333333;
+}
+.badge-inverse:hover {
+  background-color: #1a1a1a;
+}
+
+.linha-intercessor {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.footer {
+	background: #e8e8e8;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.footer h3 {
+	border-bottom: 1px solid #BAC1C8;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #F5F5F5;
+}
+.footer ul li a {
+	padding: 0 0 5px 0;
+	display: block;
+}
+.footer a {
+	color: #F5F5F5
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+
+.header-horario {
+    cursor: pointer;
+}
+
+.img-logo {
+    width: 50px;
+    position: relative;
+    top: -26px;
+    float: left;
+}
+
+.titulo {
+    float: left;
+    margin-left: 5px;
+    color: #fff;
+    font-family: Roboto;
+}
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-inverse {
+    background-color: #8f0036 !important;
+    border-color: #8f0036 !important;
+}
+
+.texto-header {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-family: Roboto;
+}
+
+.label-quadro .badge{
+    margin-left: 10px;
+}
+
+.paragrafo-inicio {
+    font-family: Roboto;
+    line-height: 25px;
+    font-size: 17px;
+}
+
+.img-intercessao {
+    margin: 0 auto;
+}
+
+.container-logo-rodape {
+    padding: 50px;
+}
+
+.texto-rodape {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.grupo-intercessores {
+    border: 0px;
+}
+
+hr {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) 
+{
+    .navbar-header {
+        padding: 0px 0px 14px 0px;
+    }
+    .navbar {
+        padding: 15px 0 0 0;
+    }
+}
+
+
