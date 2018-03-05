@@ -56,7 +56,7 @@
     <?php include("components/sidebar.php"); ?>
 
     <div id="response-div">
-  <?php include("pages/editar-lista.php"); ?>
+  <?php include("components/content.php"); ?>
     </div>
   <?php include("components/footer.php"); ?>
   <?php include("components/control-sidebar.php"); ?>
