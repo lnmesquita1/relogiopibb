@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -- >
 <section class="content-header">
     <h1>
         Blank page
