@@ -1,7 +1,18 @@
 <?php
-include("banco-intercessor.php"); 
+    require_once ("dao/IntercessorDao.php");
+    require_once ("util/Conecta.php");
 
 class QuadroHorariosUtil {
+    
+    private $intercessorDao;
+    private $conexao;
+    
+    function __construct() {
+        $conecta = new Conecta();
+        $this->conexao = $conecta->getConexao();
+        $this->intercessorDao = new IntercessorDao($this->conexao);
+    }
+
     
     function drawRow($indexInicio, $colunas) {
     $html = '';        
@@ -70,7 +81,7 @@ class QuadroHorariosUtil {
     }
 
     function verificaQtdIntercessoresHorario($horario) {
-        $arrayIntercessores = listaIntercessores();
+        $arrayIntercessores = $this->intercessorDao->listaIntercessores();
         $arrlength = count($arrayIntercessores);
         
         $contador = 0;
@@ -147,15 +158,11 @@ class QuadroHorariosUtil {
         
         return $array;
     }
-    
-    function getConexao() {
-        return $conexao;
-    }
-    
+        
     function drawResultadoRelogio($inicioIndex) {
         $html = '';
         
-        $arrayIntercessores = listaIntercessores();
+        $arrayIntercessores = $this->intercessorDao->listaIntercessores();
         $array = $this->formataArrayPeriodos();
         $arrlength = count($array);
         $contador=0;

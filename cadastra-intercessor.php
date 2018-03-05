@@ -1,5 +1,6 @@
 <?php
-      include("banco-intercessor.php"); 
+      require_once ("dao/IntercessorDao.php");
+      require_once ("util/Conecta.php");
       //require_once ("funcoes/Mensagens.php");
       
       function carregaClasse($nomeClasse) {
@@ -17,10 +18,6 @@ $horario = $_POST['check_list'];
 
 $dt = new DateTime();
 $dateTimeNow = $dt->format('Y-m-d H:i:s');
-$intercessor = new Intercessor();
-$intercessor->setNome($nome);
-$intercessor->setTelefone(NULL);
-$intercessor->setData($dateTimeNow);
 $texto = '';
 
 $horariosFull = array();
@@ -31,16 +28,17 @@ if(!empty($_POST['check_list'])) {
             array_push($horariosFull, $check);
         }
     }
-}    
-
-$intercessor->setHorario($texto);
+} 
+$intercessor = new Intercessor($nome, $texto, NULL, $dateTimeNow);
 
 if (count($horariosFull) == 0) {
-    if(insereIntercessor($intercessor)) { ?>
+    $conecta = new Conecta();
+    $conexao = $conecta->getConexao();
+    
+    $intercessorDao = new IntercessorDao($conexao);
+    if($intercessorDao->insereIntercessor($intercessor)) { ?> 
         <?php echo  $m->mensagemSucesso("Seu horário foi registrado.")?>
-    <?php } else {
-        $conecta = new Conecta();
-        $conexao = $conecta->getConexao();
+    <?php } else {        
         $msg = mysqli_error($conexao);
         echo $m->mensagemErro("Erro ao cadastrar intercessor." . $msg);
         ?>
@@ -52,7 +50,11 @@ if (count($horariosFull) == 0) {
 }
 
 function verificaQtdIntercessoresHorario($horario) {
-        $arrayIntercessores = listaIntercessores();
+        $conecta = new Conecta();
+        $conexao = $conecta->getConexao();
+
+        $intercessorDao = new IntercessorDao($conexao);
+        $arrayIntercessores = $intercessorDao->listaIntercessores();
         $arrlength = count($arrayIntercessores);
         
         $contador = 0;
@@ -72,5 +74,3 @@ function verificaQtdIntercessoresHorario($horario) {
         
         return $contador;
 }
-
-?>

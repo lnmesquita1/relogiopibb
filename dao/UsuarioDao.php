@@ -1,6 +1,5 @@
 <?php
-require_once("conecta.php"); 
-
+require_once ("model/Usuario.php");
 class UsuarioDao {
     
     private $conexao;
@@ -9,9 +8,9 @@ class UsuarioDao {
         $this->conexao = $conexao;
     }
     
-    function buscaUsuario($conexao, $nome, $senha) {
-        $query = "select * from usuarios where nm_usuario = '{$nome}' and ds_senha = '{$senha}'";
-        $resultado = mysql
+    function buscaUsuario($nome, $senha) {
+        
     }
     
-}
+}    
+

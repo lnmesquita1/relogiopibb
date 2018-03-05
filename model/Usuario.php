@@ -1,8 +1,8 @@
 <?php
 
 class Usuario {
-    
-    private $cdUsario;
+
+    private $cdUsuario;
     private $nmUsuario;
     private $dsSenha;
     
@@ -11,8 +11,9 @@ class Usuario {
         $this->dsSenha = $dsSenha;
     }
 
-    function getCdUsario() {
-        return $this->cdUsario;
+    
+    function getCdUsuario() {
+        return $this->cdUsuario;
     }
 
     function getNmUsuario() {
@@ -23,8 +24,8 @@ class Usuario {
         return $this->dsSenha;
     }
 
-    function setCdUsario($cdUsario) {
-        $this->cdUsario = $cdUsario;
+    function setCdUsuario($cdUsuario) {
+        $this->cdUsuario = $cdUsuario;
     }
 
     function setNmUsuario($nmUsuario) {
@@ -34,5 +35,6 @@ class Usuario {
     function setDsSenha($dsSenha) {
         $this->dsSenha = $dsSenha;
     }
-}
+
+}    
 
