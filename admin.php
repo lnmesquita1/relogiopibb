@@ -57,6 +57,7 @@
 
     <div id="response-div">
   <?php include("components/content.php"); ?>
+        <?php echo realpath(dirname(__FILE__)); ?>
     </div>
   <?php include("components/footer.php"); ?>
   <?php include("components/control-sidebar.php"); ?>
@@ -102,18 +103,6 @@
 <script src="admin-LTE/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin-LTE/dist/js/demo.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('ul li a').click(function() {
-            var page = $(this).attr('href');
-            $('.content-wrapper').load('pages/' + page + '.php'); 
-            return false;       
-        });     
-    });
-    
-   
-</script>
 
 </body>
 </html>

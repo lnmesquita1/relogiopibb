@@ -26,7 +26,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu</li>        
-        <li><a href="editar-lista"><i class="fa fa-files-o"></i> <span>Editar lista de oração</span></a></li>
+        <li><a href="pages/editar-lista.php"><i class="fa fa-files-o"></i> <span>Editar lista de oração</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

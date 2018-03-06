@@ -5,7 +5,7 @@ class Conecta {
     private $conexao;
     
     function __construct() {
-         $this->conexao = mysqli_connect('localhost', 'root', '', 'relogio');
+         $this->conexao = mysqli_connect('localhost', 'root', 'lucas', 'relogio');
     }
     
     function getConexao() {       
